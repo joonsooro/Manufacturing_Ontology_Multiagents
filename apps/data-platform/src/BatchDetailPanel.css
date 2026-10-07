@@ -1,0 +1,32 @@
+/* Selected-batch inspection sections, recipe checkpoints, maintenance/quality records, and audit. */
+.batch-detail-panel { overflow: hidden; border: 1px solid #d8e1e8; background: white; border-radius: 4px; }
+.batch-detail-panel > header { display: flex; gap: 10px; align-items: center; padding: 17px; border-bottom: 1px solid #d8e1e8; }
+.batch-detail-panel > header > .bp5-icon { color: #106ba3; }
+.batch-detail-panel header strong, .batch-detail-panel header span { display: block; }
+.batch-detail-panel header span, .detail-muted { color: #738694; font-size: 12px; }
+
+/* Collapsible inspection groups with label/value rows. */
+.detail-section { border-bottom: 1px solid #e8edf0; padding: 6px 16px 12px; }
+.detail-section > .bp5-button { width: 100%; justify-content: space-between; font-weight: 600; }
+.detail-section .bp5-tag { margin-left: 7px; }
+.detail-row { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; padding: 6px 4px; font-size: 12px; }
+.detail-row > span { color: #5c7080; }
+
+/* Supporting maintenance and quality evidence records. */
+.maintenance-row, .quality-row { display: grid; gap: 4px; margin: 6px 3px; padding: 9px; background: #f8fafb; font-size: 12px; }
+.maintenance-row span, .quality-row span, .maintenance-row small, .quality-row small { color: #5c7080; }
+
+/* Recipe checkpoints; .active identifies the current step. */
+.curve { padding: 10px 4px; font-size: 12px; }
+.curve > div { display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0; }
+.curve span { padding: 5px; color: #5c7080; border: 1px solid #d8e1e8; }
+.curve span.active { color: #106ba3; border-color: #48aff0; background: #ebf5ff; }
+
+/* Compact audit summaries with expandable JSON payloads. */
+.audit-row { display: grid; grid-template-columns: minmax(0, 1fr) 70px 105px; align-items: center; gap: 4px; padding: 5px 0; font-size: 12px; }
+.audit-row small { color: #738694; }
+.audit-row pre { grid-column: 1 / -1; margin: 5px 0; padding: 8px; overflow: auto; color: #394b59; background: #f5f8fa; font-size: 11px; }
+
+/* Loading placeholder keeps the inspection panel from collapsing. */
+.loading-detail { display: grid; min-height: 220px; place-items: center; border: 1px solid #d8e1e8; box-shadow: none; }
+

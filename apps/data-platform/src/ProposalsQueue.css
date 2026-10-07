@@ -1,0 +1,26 @@
+/* Long reasoning and formatted parameters remain readable without widening the application shell. */
+.proposals-queue { flex: 1; min-width: 0; padding: 28px 34px; }
+.proposals-queue > header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
+.proposals-queue h1 { margin: 0; font-size: 25px; }
+.proposals-queue header p { color: #5c7080; }
+.proposals-queue > .bp6-callout { margin-bottom: 16px; }
+.proposals-table-scroll { overflow-x: auto; margin-top: 16px; }
+.proposals-table { width: 100%; background: white; }
+.proposals-table td { vertical-align: top; }
+.proposals-table pre { margin: 0; min-width: 180px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.proposal-rationale { min-width: 220px; max-width: 380px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.proposal-buttons { display: flex; gap: 8px; }
+/* Keep workspace navigation accessible on smaller screens, including the review queue. */
+@media (max-width: 850px) { .ontology-shell > .app-rail { display: flex; flex-shrink: 0; } .proposals-queue { padding: 20px; } }
+
+/* Feedback stays beside its decision buttons and remains editable after a failed invocation. */
+.proposal-review { min-width: 300px; }
+.proposal-review textarea { resize: vertical; }
+
+/* Separate unfinished lifecycle states while preserving the same readable review table in each lane. */
+.proposal-lane { margin: 28px 0 36px; }
+.proposal-lane h2 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 19px; }
+.proposal-lane > header p { margin: 8px 0; }
+.proposal-escalation { margin-bottom: 14px; }
+.proposal-escalation p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.proposal-escalation small { display: block; overflow-wrap: anywhere; }

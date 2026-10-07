@@ -1,0 +1,5 @@
+// Type-check agent runtime, tool wrappers, and tests using the workspace Node settings.
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src"]
+}

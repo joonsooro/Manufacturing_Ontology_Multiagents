@@ -1,0 +1,16 @@
+{
+  "name": "@ontology/ontology",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=../../.env --watch --watch-path=src src/index.ts"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@hono/node-server": "^2.1.1",
+    "hono": "^4.13.9",
+    "kysely": "^0.29.6",
+    "pg": "^8.23.0"
+  }
+}

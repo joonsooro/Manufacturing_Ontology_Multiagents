@@ -1,0 +1,23 @@
+// Shared compiler policy: Node-native TypeScript is type-checked, not emitted; packages extend this base.
+{
+  "compilerOptions": {
+    /* Node 22 runs .ts natively via --experimental-strip-types.
+       The compiler is only used for type-checking, not emit. */
+    "target": "ES2024",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "erasableSyntaxOnly": true,
+    "allowImportingTsExtensions": true,
+
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

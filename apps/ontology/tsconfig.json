@@ -1,0 +1,5 @@
+// Type-check the ontology API and its action handlers using the workspace Node settings.
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src"]
+}

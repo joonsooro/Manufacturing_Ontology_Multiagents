@@ -1,0 +1,50 @@
+/* Batch overview metrics, filters, fermentation table, and selected-batch layout. */
+.batch-workspace { max-width: 1440px; margin: auto; padding: 28px 34px 52px; }
+.batch-header { display: flex; gap: 13px; align-items: center; margin-bottom: 24px; }
+.batch-header h1 { margin: 0; font-size: 23px; }
+.batch-header p { margin: 3px 0 0; color: #738694; font-size: 13px; }
+
+/* Overview cards with semantic primary/danger/warning colors. */
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.metric-card { display: flex; align-items: center; gap: 14px; padding: 18px; border: 1px solid #d8e1e8; box-shadow: none; }
+.metric-card > .bp5-icon { padding: 10px; border-radius: 4px; }
+.metric-card strong, .metric-card span { display: block; }
+.metric-card strong { font-size: 25px; line-height: 1; }
+.metric-card span { color: #5c7080; font-size: 13px; margin-top: 4px; }
+.metric-primary > .bp5-icon { color: #106ba3; background: #dcebfa; }
+.metric-danger > .bp5-icon { color: #c23030; background: #fce2e0; }
+.metric-warning > .bp5-icon { color: #bf7326; background: #fff3d6; }
+
+/* Desktop split between batch table and selected-batch inspection panel. */
+.batch-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 22px; }
+.batch-filters { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+.batch-filters .bp5-control { margin: 0 0 0 4px; }
+.batch-table-card, 
+/* Placeholder shown before selecting a batch. */
+.batch-detail .bp5-card { padding: 0; border: 1px solid #d8e1e8; box-shadow: none; overflow: hidden; }
+.batch-table-card table { width: 100%; border-collapse: collapse; text-align: left; }
+.batch-table-card th { padding: 11px 13px; color: #738694; background: #f8fafb; font-size: 11px; text-transform: uppercase; }
+.batch-table-card td { padding: 12px 13px; border-top: 1px solid #e8edf0; font-size: 13px; }
+.batch-table-card tbody tr { cursor: pointer; }
+.batch-table-card tbody tr:hover, .batch-table-card tr.selected { background: #ebf5ff; }
+
+/* Sugar delta colors correspond to the thresholds in BatchInvestigation.tsx. */
+.sugar-green strong { color: #238551; }
+.sugar-amber strong { color: #bf7326; }
+.sugar-red strong { color: #c23030; }
+.sugar-green span, .sugar-amber span, .sugar-red span { display: block; margin-top: 2px; color: #738694; font-size: 11px; }
+.batch-detail .bp5-card { min-height: 210px; padding: 28px; text-align: center; }
+.batch-detail .bp5-icon { color: #5c7080; }
+.batch-detail h2 { margin: 12px 0 5px; font-size: 16px; }
+.batch-detail p { margin: 0; color: #738694; font-size: 13px; line-height: 1.5; }
+ 
+/* Small screens hide the detail sidebar, stack metrics, and allow table scrolling. */
+@media (max-width: 980px) { .batch-layout { grid-template-columns: 1fr; }
+.batch-detail { display: none; }
+ }
+ @media (max-width: 700px) { .batch-workspace { padding: 20px; }
+.metric-grid { grid-template-columns: 1fr; }
+.batch-filters { flex-wrap: wrap; }
+.batch-table-card { overflow-x: auto; }
+ }
+

@@ -1,0 +1,30 @@
+/* Search controls and cross-type result groups layered onto the object explorer. */
+.explorer-search { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+
+.explorer-search .bp5-input-group { max-width: 520px; flex: 1; }
+.explorer-search .bp5-control { margin: 0; white-space: nowrap; }
+
+
+/* Feedback while cross-type collections are being loaded. */
+.search-loading { display: flex; justify-content: center; align-items: center; gap: 9px; min-height: 140px; color: #5c7080; font-size: 13px; }
+
+
+/* Grouped match summaries and navigable result buttons. */
+.all-results > header { margin: 0 0 18px; }
+.all-results > header h1 { margin: 0; font-size: 21px; }
+.all-results > header p { margin: 4px 0 0; font-size: 13px; color: #738694; }
+
+.result-group { margin-bottom: 16px; }
+.result-group > header { display: flex; }
+.result-group button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 20px; color: #106ba3; text-align: left; border: 0; border-top: 1px solid #e8edf0; background: transparent; cursor: pointer; font-size: 13px; font-weight: 600; }
+.result-group button:hover { background: #ebf5ff; }
+.result-group button span { flex: 1; }
+.result-group button .bp5-icon { color: #8a9ba8; }
+
+
+/* Place the cross-type toggle below the search input on small screens. */
+@media (max-width: 700px) { .explorer-search { display: block; }
+.explorer-search .bp5-input-group { max-width: none; }
+.explorer-search .bp5-control { margin-top: 10px; }
+ }
+

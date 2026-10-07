@@ -1,0 +1,76 @@
+/* Instance lists and generic object detail panels used by ObjectExplorer.tsx. */
+.explorer-main { background: #f5f7fa; }
+
+.explorer-content { max-width: 1340px; margin: auto; padding: 26px 34px 52px; }
+
+.explorer-header, .object-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+
+.explorer-header h1, .object-header h1 { margin: 0; font-size: 23px; }
+
+.explorer-header p, .object-header p { margin: 3px 0 0; color: #738694; font-size: 13px; }
+
+.object-header .bp5-button { margin-right: 3px; }
+
+.object-header .type-symbol, .explorer-header .type-symbol { width: 48px; height: 48px; }
+
+
+/* List/detail panel containers and shared headers. */
+.instance-card, .object-panel { padding: 0; border: 1px solid #d8e1e8; border-radius: 4px; box-shadow: none; overflow: hidden; }
+
+.instance-card > header, .object-panel > header { min-height: 58px; display: flex; align-items: center; gap: 11px; padding: 0 20px; border-bottom: 1px solid #d8e1e8; }
+
+.instance-card > header h2, .object-panel > header h2 { margin: 0; font-size: 15px; }
+
+
+/* Clickable instance rows; titles and IDs are styled separately. */
+.instance-table { width: 100%; border-collapse: collapse; text-align: left; }
+
+.instance-table th { background: #f8fafb; color: #5c7080; font-size: 11px; padding: 11px 20px; text-transform: uppercase; }
+
+.instance-table td { padding: 13px 20px; border-top: 1px solid #e8edf0; font-size: 13px; }
+
+.instance-table tbody tr { cursor: pointer; }
+.instance-table tbody tr:hover { background: #ebf5ff; }
+
+.instance-table td:first-child { color: #106ba3; font-weight: 600; }
+.instance-table td:last-child { color: #738694; }
+.instance-table code { font-size: 12px; }
+
+
+/* Metadata-generated actions above the object properties/link panels. */
+.action-strip { display: flex; flex-wrap: wrap; gap: 8px; min-height: 55px; margin: -5px 0 20px; padding: 10px 0; border-top: 1px solid #d8e1e8; border-bottom: 1px solid #d8e1e8; }
+
+.object-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(320px, .85fr); gap: 22px; }
+
+
+/* Generic property display with wrapped JSON/long values. */
+.detail-properties { padding: 4px 20px 10px; }
+
+.detail-property { display: grid; grid-template-columns: 20px minmax(120px, .7fr) minmax(0, 1.3fr); align-items: center; gap: 10px; min-height: 49px; border-bottom: 1px solid #edf1f3; font-size: 13px; }
+
+.detail-property:last-child { border-bottom: 0; }
+.detail-property > .bp5-icon { color: #738694; }
+.detail-property > span { color: #5c7080; }
+.detail-property > strong { font-weight: 500; overflow-wrap: anywhere; }
+.detail-property code { font-weight: 400; font-size: 12px; white-space: pre-wrap; }
+
+
+/* Relationship groups, empty states, and clickable linked objects. */
+.empty-value, .empty-links { color: #8a9ba8; font-weight: 400; }
+.link-group { border-bottom: 1px solid #e8edf0; }
+.link-group:last-child { border-bottom: 0; }
+.link-group h3 { display: flex; align-items: center; gap: 8px; margin: 0; padding: 13px 20px 8px; color: #5c7080; font-size: 12px; }
+
+.link-group button { appearance: none; border: 0; background: transparent; width: 100%; display: flex; align-items: center; gap: 9px; padding: 10px 20px 12px; color: #106ba3; text-align: left; font-size: 13px; cursor: pointer; }
+.link-group button:hover { background: #ebf5ff; }
+.link-group button span { flex: 1; }
+.link-group button .bp5-icon:last-child { color: #8a9ba8; }
+.empty-links { padding: 0 20px 13px; font-size: 12px; }
+
+
+/* Stack object panels and hide the extra ID column on smaller screens. */
+@media (max-width: 850px) { .explorer-content { padding: 20px; }
+.object-grid { grid-template-columns: 1fr; }
+.instance-table th:nth-child(3), .instance-table td:nth-child(3) { display: none; }
+ }
+

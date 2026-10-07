@@ -1,0 +1,23 @@
+{
+  "name": "@ontology/data-platform",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^6.12.1",
+    "@blueprintjs/datetime": "^6.0.25",
+    "@blueprintjs/icons": "^6.9.1",
+    "date-fns": "^2.30.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.11"
+  }
+}

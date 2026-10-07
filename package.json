@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/pg": "^8.20.0",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "run-sql": "node --env-file=.env run-sql.ts",
+    "apply-action-schema": "node apps/ontology/src/apply-schema.ts"
+  },
+  "dependencies": {
+    "@neon/config": "^1.8.3",
+    "@neon/env": "^1.5.0",
+    "@openai/codex-sdk": "^0.159.3",
+    "pg": "^8.20.0"
+  }
+}

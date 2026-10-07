@@ -1,0 +1,11 @@
+// Frontend type checking: JSX and browser APIs with Vite-compatible module resolution.
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "lib": ["ES2024", "DOM", "DOM.Iterable"]
+  },
+  "include": ["src"]
+}
